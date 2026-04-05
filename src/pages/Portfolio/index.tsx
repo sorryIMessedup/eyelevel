@@ -5,6 +5,7 @@ export function Portfolio() {
     <section
       className="panel portfolio"
       id="portfolio"
+      data-snap-page={1}
       aria-labelledby="portfolio-title"
     >
       <h2 id="portfolio-title">作品集</h2>

@@ -1,4 +1,104 @@
-.welcome {
-  color: #0f172a;
-  background: linear-gradient(165deg, #e0f2fe 0%, #f8fafc 45%, #ffffff 100%);
+/* 与 web1.0 中 .panel.intro 一致；本页滚动吸附等只写在此文件，不依赖 App.less 的 .panel */
+
+.welcome.intro {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(32, 40, 62, 0.35),
+    #050505 70%
+  );
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: #f5f5f7;
+
+  .bg-video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      to bottom,
+      rgba(5, 5, 5, 0.4),
+      rgba(5, 5, 5, 0.85)
+    );
+    pointer-events: none;
+  }
+
+  .intro-content {
+    position: relative;
+    z-index: 2;
+    width: min(860px, 92vw);
+    text-align: center;
+    animation: rise 1.25s ease both;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  .main-logo {
+    width: min(520px, 74vw);
+    max-height: 220px;
+    margin: 0 auto 28px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 10px 28px rgba(255, 255, 255, 0.18));
+  }
+
+  h1 {
+    font-size: clamp(36px, 7vw, 72px);
+    letter-spacing: 0.06em;
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+
+  .intro-content p {
+    margin: 0 auto;
+    max-width: 900px;
+    font-size: clamp(16px, 2.1vw, 23px);
+    line-height: 1.75;
+    color: rgba(245, 245, 247, 0.72);
+  }
+
+  .intro-hint {
+    position: absolute;
+    bottom: clamp(0.35rem, 2vw, 1rem);
+    left: 50%;
+    z-index: 2;
+    margin: 0;
+    max-width: min(92vw, 520px);
+    transform: translateX(-50%);
+    font-size: clamp(12px, 1.65vw, 15px);
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: rgba(245, 245, 247, 0.52);
+    padding: 0 1rem;
+    pointer-events: none;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
