@@ -5,6 +5,7 @@ export function Introduction() {
     <section
       className="panel introduction"
       id="introduction"
+      data-snap-page={2}
       aria-labelledby="introduction-title"
     >
       <h2 id="introduction-title">介绍</h2>

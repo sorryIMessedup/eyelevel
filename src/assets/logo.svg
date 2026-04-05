@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 420">
+  <line x1="120" y1="210" x2="960" y2="210" stroke="white" stroke-width="8" />
+  <circle cx="540" cy="210" r="132" stroke="white" stroke-width="8" fill="none" />
+  <path
+    d="M280 210C298 210 305 220 305 242C305 220 312 210 330 210C312 210 305 200 305 178C305 200 298 210 280 210Z"
+    fill="white"
+  />
+  <path
+    d="M750 210C768 210 775 220 775 242C775 220 782 210 800 210C782 210 775 200 775 178C775 200 768 210 750 210Z"
+    fill="white"
+  />
+</svg>
